@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Gestionar Enfermeras - Clínica San José</title>
+</head>
+
+<body>
+    <div id="sidenav" class="sidenav">
+        <h2>Clínica San José</h2>
+        <a href="./admin_dashboard.html">Panel de Administración</a>
+        <a href="./manage_doctors.html">Gestionar Doctores</a>
+        <a href="./manage_nurses.html">Gestionar Enfermeras</a>
+        <button id="logoutButton" class="btn-logout sidenav-logout">Cerrar Sesión</button>
+    </div>
+
+    <div class="manage-container">
+        <div class="header">
+            <h2>Gestionar Enfermeras</h2>
+        </div>
+        <div class="content">
+            <button id="addNurseButton" class="btn-add">Añadir Enfermera</button>
+            <div id="addNurseForm" class="add-form hidden">
+                <h3>Añadir Nueva Enfermera</h3>
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="telefono" placeholder="Teléfono" required>
+                <input type="email" id="correo" placeholder="Correo Electrónico" required>
+                <input type="text" id="direccion" placeholder="Dirección" required>
+                <input type="password" id="contrasena" placeholder="Contraseña" required>
+                <div class="form-actions">
+                    <button id="submitNurseForm" class="btn-submit">Guardar Enfermera</button>
+                    <button id="cancelNurseForm" class="btn-cancel">Cancelar</button>
+                </div>
+            </div>
+            <table id="nursesTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Dirección</th>
+                        <th>Contraseña</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Datos dinámicos de enfermeras -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../js/nurses.js"></script>
+    <script src="../js/common.js"></script>
+</body>
+
+</html>

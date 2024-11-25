@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Gestionar Doctores - Clínica San José</title>
+</head>
+
+<body>
+    <div id="sidenav" class="sidenav">
+        <h2>Clínica San José</h2>
+        <a href="./admin_dashboard.html">Panel de Administración</a>
+        <a href="./manage_doctors.html">Gestionar Doctores</a>
+        <a href="./manage_nurses.html">Gestionar Enfermeras</a>
+        <button id="logoutButton" class="btn-logout sidenav-logout">Cerrar Sesión</button>
+    </div>
+
+    <div class="manage-container">
+        <div class="header">
+            <h2>Gestionar Doctores</h2>
+        </div>
+        <div class="content">
+            <button id="addDoctorButton" class="btn-add">Añadir Doctor</button>
+            <div id="addDoctorForm" class="add-form hidden">
+                <h3>Añadir Nuevo Doctor</h3>
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="especialidad" placeholder="Especialidad" required>
+                <input type="text" id="telefono" placeholder="Teléfono" required>
+                <input type="email" id="correo" placeholder="Correo Electrónico" required>
+                <input type="text" id="direccion" placeholder="Dirección" required>
+                <input type="password" id="contrasena" placeholder="Contraseña" required>
+                <button id="submitDoctorForm" class="btn-submit">Guardar Doctor</button>
+                <button id="cancelDoctorForm" class="btn-cancel">Cancelar</button>
+            </div>
+            <table id="doctorsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Especialidad</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Contraseña</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Datos dinámicos de doctores -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../js/doctors.js"></script>
+    <script src="../js/common.js"></script>
+</body>
+
+</html>
